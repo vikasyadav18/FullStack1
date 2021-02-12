@@ -2,11 +2,740 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pro</title>
+    <title>Index</title>
+    <!-- <link rel="stylesheet" href="leftsidebar.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+*
+{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-image: url('picture/edu1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+ background-size: cover;
+  
+}
+
+
+
+.container
+{
+
+    border:0px solid red;
+    position: relative;
+    height: 2500px;
+
+    
+    height: 600px;
+
+
+}
+.header
+{
+    height: 70px;
+    width: 100%;
+    z-index: 4;
+    background: linear-gradient(to right,lightgreen,green);
+       
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+
+}
+.header img
+{
+    margin-right: 15px;
+    width: 70px;
+    height: 70px;
+    
+}
+.header h1
+{
+   line-height: 70px;
+    color: white;
+}
+.content1
+{
+    
+    width: 100%;
+    padding: 20px;
+    border:2px solid black;
+
+}
+.content1 img
+{
+   
+    width:70%;
+  
+    max-width: 700px;
+    display: block;
+    margin: auto;
+}
+.content1 p
+{
+    
+    text-align: justify;
+}
+.sidebar
+{
+    width: 20%;
+    height: 700px;
+    
+    background: linear-gradient(to right,rgba(128, 255, 170,0.7), rgba(0, 255, 85,0.7));
+    left: -100%;
+    position: absolute;
+    top: 70px;
+   transition: .4s;
+
+}
+.sidebar ul
+{
+    list-style: none;
+    
+
+}
+
+.sidebar ul li
+{
+    border-bottom: 2px solid rgba(255,255,255,.1);
+}
+
+.sidebar ul li a
+{
+    display: block;
+    font-size: 20px;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    transition: .4s;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.sidebar ul li a i
+{
+    margin-right: 15px;
+}
+
+.sidebar ul li a:hover
+{
+    border-left: 15px solid white;
+}
+
+.rightbar ul li
+{
+    padding-top: 20px;
+}
+.rightbar ul
+{
+    list-style: none;
+   
+}
+.rightbar ul li a
+{
+    display: block;
+    font-size: 20px;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    transition: .4s;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.rightbar
+{
+    z-index:3;
+    display: block;
+
+    position: absolute;
+
+     position: absolute; 
+   z-index: 0;
+
+    right: 0;
+    top: 70px;
+    width: 20%;
+    height: 500px;
+    background: linear-gradient(to right,rgba(128, 255, 170,0.7), rgba(0, 255, 85,0.7));
+   
+}
+
+
+.social
+{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid rgba(255,255,255,.1) ;
+    border-top: 2px solid rgba(255,255,255,.1) ;
+    justify-content: space-evenly;
+    font-size: 25px;
+    margin-top: 360px;
+    padding:10px 25px;
+}
+#chk
+{
+   visibility: hidden;
+}
+
+i
+{
+    color: white;
+   
+    
+}
+.show-btn,.hide-btn
+{
+    color: white;
+    font-size: 30px;
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 40px;
+    z-index: 6;
+}
+
+.hide-btn
+{
+    opacity: 0;
+}
+#chk:checked ~ .sidebar
+{
+    
+    left: 0%;
+}
+
+#chk:checked ~ .hide-btn
+{
+    opacity: 1;
+}
+
+#chk:checked ~ .show-btn
+{
+    opacity: 0;
+}
+
+#chk:checked ~ .content1
+{
+    width: 80%;
+    margin: auto;
+
+}
+/* #chk:checked ~ .content1 p
+{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 700px;
+    text-align: justify;
+} */
+
+@media (max-width: 780px)
+{
+    .sidebar
+    {
+        width: 100vw;
+        display: flex;
+       
+        justify-content:center;
+        
+
+    }
+
+    .social
+    {
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        
+        justify-content: center;
+
+       
+    }
+    .social a i
+    {
+        padding-left: 10px;
+
+    }
+
+
+
+  
+}
+
+
+
+/* footer */
+
+
+.content
+         {
+             /* position: absolute; */
+           display: block;
+            justify-content: center;
+            color: rgb(110, 109, 109) !important;
+            border: 2 px solid white;
+            /* bottom: 0px;
+            left: 0; */
+            border:4px solid rgb(81, 0, 128);
+         }
+
+         .sec-1
+         {
+             /* background-color: rgb(54, 53, 53); */
+             
+             background: linear-gradient(to right,rgba(128, 255, 170,0.7), rgba(0, 255, 85,0.7));
+   
+             display: flex;
+             flex-direction: row;
+             width: 100%;
+             height: auto;
+             padding: 15px;
+             justify-content:space-between;
+         }
+
+         .about
+         {
+             width: 40%;
+         }
+
+         .about h3
+         {
+             color: aliceblue;
+         }
+         .about p
+         {
+             color: rgb(145, 137, 137);
+
+         }
+
+         /* common style  */
+
+         i
+         {
+             padding-right: 5px;
+         }
+         
+
+         a{
+             color: rgb(145, 137, 137);
+             text-decoration: none;
+             text-align: justify;
+         }
+         a:hover
+         {
+             color: orange;
+         }
+         li
+         {
+             color:  rgb(145, 137, 137);
+             list-style: none;
+         }
+
+         h3
+         {
+             text-transform: uppercase;
+             color: aliceblue ;
+             padding-bottom: 5px;
+         }
+         .categories h3
+         {
+            color: aliceblue;
+         }
+
+         .contact
+         {
+             display: display-flex;
+             justify-content: center;
+         }
+
+         .sec-2
+         {
+            
+             
+             display: flex;
+             flex-direction: row;
+             justify-content: center;
+             padding-top: 20px;
+             padding-bottom: 30px;
+             border-bottom:2px solid rgb(134, 129, 129) ;
+             /* background-color:  rgb(54, 53, 53); */
+             background: linear-gradient(to right,rgba(51, 151, 255,0.7), rgba(53, 51, 255,0.7));
+   
+         }
+         
+
+         .sec-2 h3
+         {
+            text-transform: inherit !important;
+             color: rgb(145, 137, 137) !important;
+         }
+
+         .sec-2 a
+         {
+            
+             color: white;
+             background-color: red;
+             padding: 5px 15px;
+             margin-left: 10px;
+             border-radius: 15px;
+         }
+
+         .sec-2 a:hover
+         {
+             background-color: orange;
+         }
+
+         .sec-3
+         {
+             display: flex;
+             justify-content:center;
+             padding-top:20px;
+             padding-bottom:20px;
+             background-color: rgb(54, 53, 53);
+
+         }
+
+         .sec-3 a
+         {
+             padding: 5px;
+             margin-left: 10px;
+             background-color: rgb(238, 235, 235,.1);
+             border-radius: 20px;
+             font-size: 20px;
+         }
+
+        .facebook:hover
+        {
+            background-color: blue;
+        }
+
+        .twitter:hover
+        {
+            background-color: skyblue;
+        }
+        .google:hover
+        {
+            background-color: red;
+        }
+        .linkedin:hover
+        {
+            background-color: lightblue;
+        }
+        .dribbble:hover
+        {
+            background-color: pink;
+        }
+
+
+         
+         .sec-4
+         {
+             display: flex;
+             justify-content: center;
+             background-color: black;
+             height: 50px;
+
+
+         }
+
+         .sec-4 p
+         {
+             line-height: 50px;
+             color: rgb(145, 137, 137);
+
+         }
+
+         .sec-4 p::after
+         {
+             content: '';
+             display: block;
+             width: 0;
+             height: 3px;
+             background-color: orange;
+             position: relative;
+            transition: all .3s;
+            right: 0;
+            bottom: 10px;
+         }
+
+
+
+         .sec-4 p:hover::after
+         { 
+             width: 100%;
+         }
+
+
+.content1 h1
+{
+
+     position: absolute;
+    top: 200px;
+    color: aliceblue;
+    left: 350px;
+    font-size: 35px;
+    background-color: linear-gradient(to right,rgba(128, 255, 170,0.7), rgba(0, 255, 85,0.7));
+}
+
+
+.button{
+    position: absolute;
+    top: 300px;
+    left: 600px;
+    
+z-index:0;
+}
+.button a
+{
+  
+   
+    border-radius: 10px;
+    background: linear-gradient(to right,white,green);
+    padding: 10px 10px;
+    
+
+}
+
+input[type='search']
+{
+    position: relative;
+    width: 250px;
+    left: 460px;
+    padding: 10px 10px;
+}
+.fa-search{
+    position: relative;
+    left: 460px;
+    padding: 10px 10px; 
+}
+.logout{
+    position: relative;
+    left: 460px;
+    margin-right: 20px; 
+    font-size: 18px;
+    
+}
+.logout a{
+    color:blue;
+}
+.logout:hover{
+    border-bottom: 2px solid white;
+}
+.fa-search:hover{
+    transform: scale(1.3);
+    color: blue;
+}
+.mycards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .mycards .cards{
+  
+    width: 250px;
+    height:280px;
+    border-radius: 20px;
+    margin: 30px;
+
+background-color: orange;
+}
+.mycards .cards img{
+width: 100%;
+height: 150px;
+border-radius: 20px;
+display: block;
+margin-bottom: 10px;
+}
+.cards p{
+    padding:5px;
+    text-align: justify;
+    /* border: 1px solid green; */
+}
+        </style>
 </head>
 <body>
-    <h1>hello</h1>
+ 
+ <div class="container">  
+
+    <div class="header">
+        <h1>E-<sub>Learning</sub></h1>
+        <a href="php/logout.php" class="logout"><i class="fa fa-id-card"><span> Log out</span></i></a>
+        <form action="php/search.php" method="POST">
+        <input type="search" name="searchcontent" placeholder="Search here">
+         <i class="fa fa-search"></i>
+        </form>
+    </div>
+     
+    <input type="checkbox" id="chk">
+    <label for="chk" class="show-btn">
+        <i class="fa fa-bars"></i>
+    </label>
+   
+    <label for="chk" class="hide-btn">
+        <i class="fa fa-times"></i>
+    </label>
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html"><i class="fa fa-home"><span> home</span></i></a></li>
+            <li><a href="files/aboutus.html"><i class="fa fa-user"><span> About</span></i></a></li>
+            <li><a href="#"><i class="fa fa-tasks"><span> services</span></i></a></li>
+            
+            <li><a href="files/contact.html"><i class="fa fa-id-card"><span> Contact</span></i></a></li>
+            
+        </ul>
+       <div class="social" id="social1">
+           <a href="#"><i class="fa fa-facebook-square"></i></a>
+           <a href="#"><i class="fa fa-youtube-square"></i></a>
+           <a href="#"><i class="fa fa-instagram"></i></a>
+       </div>
+    </div>
+
+    <!-- right Side -->
+    <div class="rightbar" id="rightsidebar">
+        <ul>
+            <li><a href="https://vikasyadav18.github.io/miniProject/files/daa1Intro.html"><i class="fa fa-tasks"><span>Data Structure</span></i></a></li>
+            <li><a href="https://vikasyadav18.github.io/miniProject/files/Cintro.html"><i class="fa fa-tasks"><span>C-Introduction</span></i></a></li>
+            <li><a href="https://vikasyadav18.github.io/miniProject/files/C.html"><i class="fa fa-tasks"><span>C-programming</span></i></a></li>
+            <li><a href="https://vikasyadav18.github.io/miniProject/files/python1.html"><i class="fa fa-tasks"><span>1-Python</span></i></a></li>
+            <li><a href="https://vikasyadav18.github.io/miniProject/files/python2.html"><i class="fa fa-tasks"><span>2-Python</span></i></a></li>
+            <li><a href="https://vikasyadav18.github.io/miniProject/files/c++1.html"><i class="fa fa-tasks"><span>Learn C++</span></i></a></li>
+            <li><a href="https://vikasyadav18.github.io/miniProject/files/c++2.html"><i class="fa fa-tasks"><span>Application and classes of C++</span></i></a></li>
+            <li><a href="#"><i class="fa fa-tasks"><span>Learn HTML</span></i></a></li>
+            <li><a href="#"><i class="fa fa-tasks"><span>Learn Java</span></i></a></li>
+            <li><a href="#"><i class="fa fa-rss"><span>More</span></i></a></li>
+        </ul>
+      
+    </div>
+    <br>
+    <img src="https://vikasyadav18.github.io/miniProject/files/picture\background.jpg" alt="" style="height: 100%; width: 100%;">
+    <div class="content1" >
+
+           <h1>   Welcome to E-Learning <span><sub>let's study</sub></span></h1>        
+    </div>
+
+    <div class="button">
+        <a href="https://vikasyadav18.github.io/miniProject/files/signIn.html"><sub>let's</sub>JOIN</a>
+    </div>
+    
+    <!-- <div id ="myContainer"> 
+        <div  class="button" id ="myAnimation">
+            <button id="btnName"> 
+                <a id="btnlink" href="https://vikasyadav18.github.io/miniProject/files/signIn.html">
+                    <sub>let's</sub>JOIN </a>
+            </button>
+        </div>
+    </div> -->
+    <!-- <div class="button">
+        
+    </div> -->
+    <!-- <script>
+        function myMove() {
+          var elem = document.getElementById("myAnimation");   
+          var pos = 0;
+          var id = setInterval(frame, 10);
+          function frame() {
+            if (pos == 150) {
+              clearInterval(id);
+            } else {
+              pos++; 
+              elem.style.top = pos + 'px'; 
+              elem.style.left = pos + 'px'; 
+            }
+          }
+        }
+        </script> -->
+
+
+
+<!-- footer -->
+
+<div class="footer">
+   
+    <footer>
+        <section class="sec-1">
+
+            <section class="about">
+                <h3>About</h3>
+                <p style="overflow:hidden;">The physical classroom learning nowadays is no longer 
+                    applicable for the current younger generations (Gen Y). In an 
+                    era known as the society of technology and knowledge, where 
+                    lifelong learning is a way of life, we are developing a website 
+                    named as “study point” for goal of finding effective ways of 
+                    providing new learning material. The project is a Java based 
+                    project developed with the help of Java, HTML and CSS .This 
+                    E-learning website includes computer based learning. This E-
+                    learning website provide knowledge to the students about 
+                    various topics and in an effort to make learning more 
+                    efficient, equitable and innovative. It provides efficiency and 
+                    effectiveness in providing education to the students .This 
+                    website has no registered user, any guest user can take 
+                    advantage of it.</p>
+            </section>
+            <section class="categories">
+                <h3>Categories</h3>
+                <ul>
+                    <li> <a href="files/C.php">C</a> </li>
+                    <li> <a href="#">UI Design</a> </li>
+                    <li> <a href="#">PHP</a> </li>
+                    <li> <a href="files/java1.php">Java</a> </li>
+                    <li> <a href="#">Android</a> </li>
+                    <li> <a href="#">Templates</a> </li>
+                    
+                </ul>
+            </section>
+            <section class="quick-links">
+                <h3>Quick-links</h3>
+                <ul>
+                    <li><a href="files/aboutus.html">About Us</a></li>
+                    <li><a href="files/contact.html">Contact Us</a></li>
+                    <li><a href="#">Contribute</a></li>
+                    <li><a href="files/java1.php">Java</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                   
+                </ul>
+            </section>
+            <section class="contact">
+                <h3>Contact</h3>
+                <ul>
+                    <li> <a href="#"> <i class="fa fa-home"></i> <span>GLA University mathura UP,India</span> </a></li>
+                    <li> <a href="#"> <i class="fa fa-envelope-o"></i> <span>studyPoint@gmail.com</span></a></li>
+                    <li> <a href="#"> <i class="fa fa-mobile"></i> <span>90******35</span></a></li>
+                    <li> <a href="#"> <i class="fa fa-facebook"></i><span>StudyPoint</span> </a></li>
+                </ul>
+            </section>
+
+        </section>
+       
+        <section class="sec-2">
+            <h3>Register for Free</h3>
+            <a href="files\signIn.html">Signup!</a>
+
+        </section>
+
+        
+
+        <section class="sec-3">
+           <a href="#" class="facebook" ><i class="fa fa-facebook" ></i></a> 
+           <a href="#" class="twitter"><i class="fa fa-twitter" ></i></a> 
+           <a href="#" class="google" ><i class="fa fa-google" ></i></a> 
+           <a href="#" class="linkedin" ><i class="fa fa-linkedin" ></i></a> 
+           <a href="#" class="dribbble" ><i class="fa fa-dribbble" ></i></a> 
+        </section>
+        
+        <section class="sec-4">
+            <p>Copyright @ 2020 All Rights Reserved by <span> <a href="#">Study Point</a></span> </p>
+        </section>
+    </footer>
+</div> 
+      
 </body>
 </html>
